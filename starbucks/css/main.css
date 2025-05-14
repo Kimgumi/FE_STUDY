@@ -5,7 +5,7 @@ body {
   font-weight: 400;
   line-height: 1.4; /*행간*/
   font-family: "Nanum Gothic", sans-serif;
-  height: 3000px;;
+  height: 3000px;
 }
 img { display:block; } /*img 태그는 기본적으로 inline으로 되어있기 때문에 block(레이아웃)으로 바꿔준다.*/
 a { text-decoration: none; }/*링크에 밑줄을 없애준다*/
@@ -15,6 +15,17 @@ a { text-decoration: none; }/*링크에 밑줄을 없애준다*/
   /*자동으로 계산하려면 요소의 길이를 브라우저가 알고 있어야 함*/
   position: relative; 
 }
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333; border-radius: 4px;
+  color: #333;
+  font-size: 16px; font-weight: 600;
+  text-align: center; cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+}
+.btn:hover {background-color: #333; color: #fff;}
 
 /*Header*/
 header {
@@ -22,8 +33,11 @@ header {
   position: fixed; 
   background-color: #f1f1f1; border-bottom: 1px solid #c8c8c8; 
   top: 0;
+  z-index: 9; /* 쌓임 순서 */
 }
 header > .inner {height: 110px;} /*header 바로 아래의 inner를 가리킨다 */
+
+
 header .logo { /*사진 크기는 본래의 사진 크기가 기본값으로 들어간다*/
   height: 75px; /*기본값이지만 명시*/
   position: absolute; /*absolute는 부모(position:relative => inner)를 기준으로 위치를 잡는다*/
@@ -144,4 +158,40 @@ header .badges .badge {
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0,0,0,.15);
   cursor: pointer;
+}
+
+/* SECTION - VISUAL */
+.visual {
+  margin-top: 110px; /* height만큼 margin을 벌어지게 만든 것*/
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+}
+.visual > .inner {height: 646px;}
+.visual .title {
+  position: absolute;
+  top: 88px; left: -10px;
+}
+.visual .title .btn {
+  position: absolute;
+  top: 259px; left: 173px;
+}
+.visual .cup1.image { /* cup1와 image인 클래스가 있는 것을 찾는다 */
+  position: absolute;
+  bottom: 0; right: -47px;
+}
+.visual .cup1.text {
+  position: absolute;
+  top: 38px; right: 171px;
+}
+.visual .cup2.image {
+  position: absolute;
+  bottom: 0; right: 162px;
+}
+.visual .cup2.text {
+  position: absolute;
+  bottom: 321px; right: 416px;
+}
+.visual .spoon {
+  position: absolute;
+  bottom: 0; left: 275px;
 }
