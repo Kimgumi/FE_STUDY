@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   position: relative;
 }
-a {text-decoration: none;}
+a {text-decoration: none; color: #656565;}
 
 
 /* HEADER */
@@ -21,25 +21,15 @@ header {
   background-color: #fff;
   border-bottom: 1px solid #333;
 }
-header .menu01 {
-  position: absolute;
-  bottom: 10px; left: 0;
-}
-header .menu01 ul {
-  display: flex;
-}
-header .menu01 ul li {
-  padding: 0 10px 0 0;
-}
-header .menu01 ul li img {
-  margin: 0 3px 0 0;
-}
+header .menu01 {position: absolute;bottom: 10px; left: 0;}
+header .menu01 ul {display: flex;}
+header .menu01 ul li {padding: 0 10px 0 0;}
+header .menu01 ul li img {margin: 0 3px 0 0;}
 
 header .icon-img {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   margin: auto;
-
 }
 
 header .menu02 {
@@ -58,30 +48,33 @@ header .menu02 ul li {
 nav {
   width: 100%;
   height: 50px;
-  border-bottom: 0.5px solid #656565;
+  border-bottom: .1px solid #656565;
 }
-nav > .inner {}
+nav > .inner { height: 100px; }
 nav > .inner ul {
   display: flex;
   justify-content: center;
+}
+nav > .inner ul .item {
+
+}
+nav > .inner ul .item .item_name {
+  background-color: #fff;
+  font-size: 23px;
+  padding: 13px 24px;
+}
+nav > .inner ul .item .item_name:hover { border-bottom: 3px solid red;}
+nav > .inner ul .item .item_content {
+  height: 40px; background-color:aquamarine
+}
+nav > .inner ul .item .item_content li {
+  font-size: 20px;
+  padding: 5px 5px;
+  display: none;
   align-items: center;
-  background-color:beige;
 }
 
-nav > .inner ul > li .item_name {
-  padding: 10px 24px;
-  font-size: 16px;
-  margin: 0 10px;
-  background-color: aqua;
-}
-
-nav > .inner ul > li .item_content {
-} 
-
-
-
-
-nav .extra {position: absolute; bottom: 0; right: 0;}
+nav .extra {position: absolute; top: 15px; right: 0;}
 nav .extra li {
   display: flex;
   align-items: center;
@@ -91,3 +84,24 @@ nav .extra li .material-icons {font-size: 18px;}
 nav .extra li .font {font-size: 13px; padding: 3px 5px;}
 nav .extra .event .material-icons { font-size: 25px;}
 nav .extra .event .material-icons:hover { cursor: pointer;}
+
+/* SECTION(TITLE) */
+.title {
+}
+.title > .inner {
+  height: 120px;
+  border-bottom: 1px solid #333;
+}
+.title > .inner h2 {
+  font-size: 30px;
+  padding: 20px 0;
+  position: absolute; bottom: 0;  left: 0;
+}
+.title > .inner ul {
+  display: flex;
+  position: absolute; bottom: 0; right: 0;
+}
+.title > .inner ul li {
+  font-size: 20px;
+  padding: 20px 0 20px 20px;
+}
